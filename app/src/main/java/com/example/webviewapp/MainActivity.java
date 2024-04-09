@@ -17,10 +17,12 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
 
     public void showExternalWebPage(){
+        myWebView.loadUrl("https://his.se");
         // TODO: Add your code for showing external web page here
     }
 
     public void showInternalWebPage(){
+        myWebView.loadUrl("file:///android_asset/about.html");
         // TODO: Add your code for showing internal web page here
     }
 
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
+        myWebView.loadUrl("file:///android_asset/about.html");
         myWebView.loadUrl("https://his.se");
         /*
         * Rename your App. Tip: Values->Strings
